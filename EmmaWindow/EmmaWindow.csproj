@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+	<PropertyGroup />
+
+    <ItemGroup>
+      <Compile Update="Wave.cs">
+        <DependentUpon>MainWindow.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="EmmaActions.cs">
+        <DependentUpon>MainWindow.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="TuyaLights.cs">
+        <DependentUpon>MainWindow.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.22621.2428" />
+      <PackageReference Include="NAudio" Version="2.2.1" />
+      <PackageReference Include="OpenAI" Version="1.10.0" />
+      <PackageReference Include="System.Speech" Version="6.0.0" />
+      <PackageReference Include="TuyaNet" Version="1.0.3" />
+      <PackageReference Include="Xam.Plugins.TextToSpeech" Version="4.1.0.1-beta" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Speech">
+        <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+	
+
+</Project>
